@@ -6,6 +6,9 @@ export ZSH="/Users/rohailkabani/.oh-my-zsh"
 # theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+# ruby
+eval "$(rbenv init -)"
+
 # plugins
 plugins=(
   zsh-syntax-highlighting
