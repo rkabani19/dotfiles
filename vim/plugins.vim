@@ -23,6 +23,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 set laststatus=2
