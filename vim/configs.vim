@@ -51,3 +51,15 @@ autocmd FileType ruby setlocal commentstring=#\ %s
 
 " preferences
 inoremap jj <Esc>
+
+"ale configs
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier', 'eslint'],
+\   'javascript.jsx': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'eslint', 'tslint --jsx'],
+\   'typescript.tsx': ['prettier', 'eslint', 'tslint --jsx'],
+\}

@@ -24,6 +24,14 @@ Plug 'tpope/vim-commentary'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+
+Plug 'jparise/vim-graphql'
+
+Plug 'w0rp/ale'
 call plug#end()
 
 set laststatus=2
