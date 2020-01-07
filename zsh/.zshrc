@@ -9,6 +9,11 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # ruby
 eval "$(rbenv init -)"
 
+# go
+export GOPATH=/usr/local/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH:$GOBIN
+
 # plugins
 plugins=(
   zsh-syntax-highlighting
