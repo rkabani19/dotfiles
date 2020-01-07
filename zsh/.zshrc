@@ -10,9 +10,12 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 eval "$(rbenv init -)"
 
 # go
-export GOPATH=/usr/local/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH:$GOBIN
+export GOBIN=/usr/local/go/bin
+export PATH=$PATH:$GOBIN
+
+export GOPATH=/Users/rohailkabani/golib
+export PATH=$PATH:$GOPATH/bin
+export GOPATH=/Users/rohailkabani/desktop/playground/go/learn-go # example of workspace GOPATH
 
 # plugins
 plugins=(
