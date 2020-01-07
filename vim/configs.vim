@@ -42,7 +42,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " fuzzy search
-nnoremap <silent> <Leader>p :FZF<CR>
+nnoremap <silent> <Leader>g :FZF<CR>
 let g:fzf_layout = { 'down': '~15%' }
 
 " commenting
@@ -63,3 +63,16 @@ let g:ale_fixers = {
 \   'typescript': ['prettier', 'eslint', 'tslint --jsx'],
 \   'typescript.tsx': ['prettier', 'eslint', 'tslint --jsx'],
 \}
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+" copy paste
+vnoremap <leader>y  "+y
+nnoremap <leader>Y  "+yg_
+nnoremap <leader>y  "+y
+nnoremap <leader>yy "+yy
+nnoremap <leader>p  "+p
+nnoremap <leader>P  "+P
+vnoremap <leader>p  "+p
+vnoremap <leader>P  "+P

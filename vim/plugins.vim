@@ -32,6 +32,14 @@ Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 
 Plug 'w0rp/ale'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 call plug#end()
 
 set laststatus=2
