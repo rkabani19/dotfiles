@@ -17,6 +17,10 @@ alias got='git '
 alias get='git '
 alias gut='git '
 
+# vim to nvim
+alias vi="nvim";
+alias vim="nvim";
+
 # Configuration aliases
 alias themeconfig='vim ~/.oh-my-zsh/custom/themes/powerlevel9k/prompt_powerlevel9k_setup'
 alias zshrc='cd ~/dotfiles/zsh && vim ~/dotfiles/zsh'
