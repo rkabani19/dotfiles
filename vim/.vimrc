@@ -1,8 +1,8 @@
 " plugins
 source ~/dotfiles/vim/plugins.vim
 
-" custom themes and colors
+" custom theme and colors
 source ~/dotfiles/vim/colors.vim
 
-" configs
+" configurations
 source ~/dotfiles/vim/configs.vim

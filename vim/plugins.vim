@@ -1,45 +1,29 @@
-" automatic installation of vim-plug, if it's not available
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-" plugins
 call plug#begin('~/.vim/plugged')
-Plug 'haishanh/night-owl.vim'
+  " theme
+  Plug 'arcticicestudio/nord-vim'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+  " autcomplete
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ 
+  " git wrapper
+  Plug 'tpope/vim-fugitive'
+  
+  " show history
+  Plug 'mbbill/undotree'
+  
+  " language pack
+  Plug 'sheerun/vim-polyglot'
+  
+  " search
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 
-Plug 'scrooloose/nerdtree'
+  " go
+  Plug 'fatih/vim-go'
 
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
+  " status & tabline
+  Plug 'vim-airline/vim-airline'
 
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-
-Plug 'tpope/vim-commentary'
-
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
-
-Plug 'jparise/vim-graphql'
-
-Plug 'w0rp/ale'
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+  " auto close brackets
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()
-
-set laststatus=2
