@@ -23,8 +23,8 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let loaded_matchparen = 1
-let mapleader = " "
+let loaded_matchparen=1
+let mapleader=" "
 
 let g:netrw_liststyle=3
 let g:netrw_browse_split = 2
@@ -35,10 +35,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 imap jj <Esc>
 
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <C-h> :wincmd h<CR>
+nnoremap <C-j> :wincmd j<CR>
+nnoremap <C-k> :wincmd k<CR>
+nnoremap <C-l> :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>b :Lex<CR>
 nnoremap <leader>f :FZF<CR>
