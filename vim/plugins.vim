@@ -20,4 +20,10 @@ call plug#begin('~/.vim/plugged')
 
   " go
   Plug 'fatih/vim-go'
+
+  " status & tabline
+  Plug 'vim-airline/vim-airline'
+
+  " auto close brackets
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()
