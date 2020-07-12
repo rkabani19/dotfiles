@@ -7,9 +7,6 @@ export ZSH="/Users/rkabani/.oh-my-zsh"
 ZSH_THEME=""
 export TERM="xterm-256color"
 
-# go
-export GOPATH=$HOME/golib
-
 # plugins
 plugins=(
   zsh-syntax-highlighting
@@ -17,6 +14,9 @@ plugins=(
   git
   z
 )
+
+# go
+export GOPATH=$HOME/go
 
 # oh my zsh
 source $ZSH/oh-my-zsh.sh

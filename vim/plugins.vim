@@ -17,4 +17,7 @@ call plug#begin('~/.vim/plugged')
   " search
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+
+  " go
+  Plug 'fatih/vim-go'
 call plug#end()
