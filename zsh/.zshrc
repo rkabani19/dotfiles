@@ -1,6 +1,5 @@
 DOTFILES=~/dotfiles/zsh
 
-#export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="/Users/rkabani/.oh-my-zsh"
 
 # theme
@@ -17,6 +16,7 @@ plugins=(
 
 # go
 export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 
 # oh my zsh
 source $ZSH/oh-my-zsh.sh
@@ -25,5 +25,5 @@ source $ZSH/oh-my-zsh.sh
 source $DOTFILES/aliases.zsh
 
 # more theme stuff
-autoload -U promptinit; promptinit 
+autoload -U promptinit; promptinit
 prompt pure

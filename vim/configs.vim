@@ -30,6 +30,9 @@ let g:netrw_liststyle=3
 let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 
+let g:go_highlight_function_calls = 1
+let g:go_fmt_command = "goimports"
+
 " remove white spaces
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -43,6 +46,8 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>b :Lex<CR>
 nnoremap <leader>f :FZF<CR>
 nnoremap <leader>r :Rg<CR>
+noremap <leader>y "*y
+noremap <leader>p "*p
 
 " git stuff
 nnoremap <leader>gd :Gdiff<CR>
