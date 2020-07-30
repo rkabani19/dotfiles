@@ -21,7 +21,9 @@ alias gut='git '
 alias vi="nvim";
 alias vim="nvim";
 
-# Configuration aliases
-alias themeconfig='vim ~/.oh-my-zsh/custom/themes/powerlevel9k/prompt_powerlevel9k_setup'
-alias zshrc='cd ~/dotfiles/zsh && vim ~/dotfiles/zsh'
-alias vimrc='cd ~/dotfiles/.vim && vim ~/dotfiles/.vim'
+# tmux
+alias ta="tmux attach -t";
+alias tks="tmux kill-session -t";
+alias tksv="tmux kill-server";
+alias tls="tmux ls";
+alias tn="tmux new-session -s";
