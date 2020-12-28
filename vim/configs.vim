@@ -26,10 +26,6 @@ endif
 let loaded_matchparen=1
 let mapleader=" "
 
-let g:netrw_liststyle=3
-let g:netrw_browse_split = 2
-let g:netrw_banner = 0
-
 let g:go_highlight_function_calls = 1
 let g:go_fmt_command = "goimports"
 
@@ -43,7 +39,6 @@ nnoremap <C-j> :wincmd j<CR>
 nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-l> :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>b :Lex<CR>
 nnoremap <leader>f :FZF<CR>
 nnoremap <leader>r :Rg<CR>
 noremap <leader>y "*y
@@ -59,6 +54,9 @@ nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gy <Plug>(coc-type-definition)
 nmap <silent>gi <Plug>(coc-implementation)
 nmap <silent>gr <Plug>(coc-references)
+
+" File tree (testing...)
+nmap <leader>b :CocCommand explorer<CR>
 
 " coc
 inoremap <silent><expr> <TAB>

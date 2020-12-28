@@ -8,7 +8,7 @@ export TERM="xterm-256color"
 
 # plugins
 plugins=(
-  zsh-syntax-highlighting
+#  zsh-syntax-highlighting
   zsh-autosuggestions
   git
   z
