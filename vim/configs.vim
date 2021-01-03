@@ -23,11 +23,12 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let loaded_matchparen=1
 let mapleader=" "
 
 let g:go_highlight_function_calls = 1
 let g:go_fmt_command = "goimports"
+
+let g:fzf_layout = { 'down': '~30%' }
 
 " remove white spaces
 autocmd BufWritePre * :%s/\s\+$//e

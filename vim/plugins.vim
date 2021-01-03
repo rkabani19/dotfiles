@@ -4,16 +4,16 @@ call plug#begin('~/.vim/plugged')
 
   " autcomplete
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
- 
+
   " git wrapper
   Plug 'tpope/vim-fugitive'
-  
+
   " show history
   Plug 'mbbill/undotree'
-  
+
   " language pack
   Plug 'sheerun/vim-polyglot'
-  
+
   " search
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
