@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# vim folder
-ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+# nvim
+ln -sf ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+ln -sf ~/dotfiles/nvim/coc/coc-settings.json ~/.config/nvim/coc-settings.json
+ln -sf ~/dotfiles/nvim/coc/package.json ~/.config/coc/extensions/package.json
 
 # zshrc
 ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
