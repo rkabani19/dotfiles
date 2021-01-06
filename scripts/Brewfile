@@ -1,0 +1,23 @@
+# tap
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+# brew
+brew neovim
+brew tmux
+brew zsh
+brew ripgrep
+brew fd
+brew git
+brew node
+brew yarn
+brew go
+brew ruby
+brew jq
+brew glow
+brew rectangle
+
+# cask
+cask "iterm2"
+cask "google-chrome"
