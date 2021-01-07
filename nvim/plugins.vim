@@ -5,8 +5,9 @@ call plug#begin('~/.config/nvim/plugged')
   " autcomplete
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  " git wrapper
+  " git
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
 
   " show history
   Plug 'mbbill/undotree'
@@ -26,4 +27,7 @@ call plug#begin('~/.config/nvim/plugged')
 
   " auto close brackets
   Plug 'jiangmiao/auto-pairs'
+
+  " auto comment
+  Plug 'tpope/vim-commentary'
 call plug#end()

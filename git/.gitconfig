@@ -3,4 +3,4 @@
   email = rohail.kabani@gmail.com
 [core]
   editor = vim
-  excludesfile = /Users/rkabani/.gitignore
+	excludesfile = /Users/rkabani/.gitignore_global

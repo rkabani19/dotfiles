@@ -10,7 +10,7 @@ set nowrap
 set smartcase
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
 set termguicolors
@@ -19,20 +19,26 @@ set cursorline
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=#4C566A
 
+let mapleader=" "
+
+" ripgrep
 if executable('rg')
     let g:rg_derive_root='true'
 endif
+nnoremap <leader>r :Rg<CR>
 
-let mapleader=" "
-
+" go
 let g:go_highlight_function_calls = 1
 let g:go_fmt_command = "goimports"
 
+" fzf
 let g:fzf_layout = { 'down': '~30%' }
+nnoremap <leader>f :FZF<CR>
 
 " remove white spaces
 autocmd BufWritePre * :%s/\s\+$//e
 
+" vim mappings
 imap jj <Esc>
 
 nnoremap <C-h> :wincmd h<CR>
@@ -40,8 +46,6 @@ nnoremap <C-j> :wincmd j<CR>
 nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-l> :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>f :FZF<CR>
-nnoremap <leader>r :Rg<CR>
 noremap <leader>y "*y
 noremap <leader>p "*p
 
@@ -70,3 +74,4 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
