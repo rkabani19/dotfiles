@@ -1,5 +1,6 @@
 DOTFILES=~/dotfiles/zsh
 
+ZSH_DISABLE_COMPFIX=true
 export ZSH="/Users/rkabani/.oh-my-zsh"
 
 # theme
