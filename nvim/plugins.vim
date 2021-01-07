@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
   " theme
   Plug 'arcticicestudio/nord-vim'
 
