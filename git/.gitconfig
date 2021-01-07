@@ -1,0 +1,6 @@
+[user]
+  name = rkabani19
+  email = rohail.kabani@gmail.com
+[core]
+  editor = vim
+  excludesfile = /Users/rkabani/.gitignore
