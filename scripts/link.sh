@@ -9,4 +9,10 @@ ln -sf ~/dotfiles/nvim/coc/package.json ~/.config/coc/extensions/package.json
 ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 
 # tmux
-ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+
+# git
+ln -sf ~/dotfiles/git/.gitignore_global ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
+
