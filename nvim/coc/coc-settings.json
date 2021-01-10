@@ -1,8 +1,4 @@
 {
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.jediEnabled": false,
-
   "languageserver": {
     "golang": {
       "command": "gopls",
@@ -18,5 +14,5 @@
   "explorer.file.showHiddenFiles": true,
   "explorer.file.autoReveal": false,
   "explorer.previewAction.onHover": false,
-  "explorer.file.column.indent.indentLine": true,
+  "explorer.file.column.indent.indentLine": true
 }
