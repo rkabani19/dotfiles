@@ -75,3 +75,9 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" telescope
+lua require("telescope_custom")
+nnoremap <leader>f :lua require('telescope.builtin').find_files()<CR>
+nnoremap <leader>rs :lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>rw :lua require('telescope.builtin').grep_string()<cr>
+nnoremap <leader>gb :lua require('telescope_custom').git_branches()<CR>
