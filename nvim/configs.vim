@@ -1,23 +1,26 @@
 syntax on
 
-set noerrorbells
-set tabstop=2 softtabstop=2
-set shiftwidth=2
-set expandtab
-set smartindent
-set nu
-set nowrap
-set smartcase
-set noswapfile
-set nobackup
-set undodir=~/.config/nvim/undodir
-set undofile
-set incsearch
-set termguicolors
 set cursorline
+set expandtab
+set hidden
+set ignorecase
+set incsearch
+set lazyredraw
+set nobackup
+set noerrorbells
+set noswapfile
+set nowrap
+set nu
+set smartcase
+set smartindent
+set splitbelow
+set splitright
+set termguicolors
+set undofile
 
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=#4C566A
+set shiftwidth=2
+set tabstop=2 softtabstop=2
+set undodir=~/.config/nvim/undodir
 
 let mapleader=" "
 
@@ -31,10 +34,6 @@ nnoremap <leader>r :Rg<CR>
 let g:go_highlight_function_calls = 1
 let g:go_fmt_command = "goimports"
 
-" fzf
-let g:fzf_layout = { 'down': '~30%' }
-nnoremap <leader>f :FZF<CR>
-
 " remove white spaces
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -45,11 +44,13 @@ nnoremap <C-h> :wincmd h<CR>
 nnoremap <C-j> :wincmd j<CR>
 nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-l> :wincmd l<CR>
-nnoremap <leader>u :UndotreeShow<CR>
 noremap <leader>y "*y
 noremap <leader>p "*p
 
-" git stuff
+" undotree
+nnoremap <leader>u :UndotreeShow<CR>
+
+" git (fugitve) stuff
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gs :G<CR>
@@ -78,6 +79,7 @@ endfunction
 " telescope
 lua require("telescope_custom")
 nnoremap <leader>f :lua require('telescope.builtin').find_files()<CR>
-nnoremap <leader>rs :lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>rw :lua require('telescope.builtin').grep_string()<cr>
-nnoremap <leader>gb :lua require('telescope_custom').git_branches()<CR>
+nnoremap <leader>tgb :lua require('telescope_custom').git_branches()<CR>
+nnoremap <leader>ts :lua require('telescope.builtin').live_grep()<Cr>
+nnoremap <leader>tw :lua require('telescope.builtin').grep_string()<Cr>
+nnoremap <leader>vrc :lua require('telescope_custom').search_dotfiles()<CR>

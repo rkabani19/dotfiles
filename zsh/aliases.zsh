@@ -1,16 +1,15 @@
 # Git aliases
-alias gs='git status '
+alias g='git'
 alias ga='git add '
 alias gb='git branch '
 alias gc='git commit'
-alias gd='git diff'
 alias gco='git checkout '
-alias grm='git fetch origin master && git rebase origin/master'
-alias gp='git push '
+alias gd='git diff'
 alias gpf='git push --force-with-lease'
-alias gk='gitk --all&'
-alias gx='gitx --all'
-alias g='git'
+alias gpull='git pull'
+alias gpush='git push '
+alias grm='git fetch origin master && git rebase origin/master'
+alias gs='git status '
 
 # Misspelled git
 alias got='git '
