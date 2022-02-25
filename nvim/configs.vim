@@ -1,4 +1,5 @@
 syntax on
+filetype plugin indent on
 
 set cursorline
 set expandtab
@@ -44,6 +45,7 @@ nnoremap <C-h> :wincmd h<CR>
 nnoremap <C-j> :wincmd j<CR>
 nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-l> :wincmd l<CR>
+
 noremap <leader>y "*y
 noremap <leader>p "*p
 
@@ -81,5 +83,21 @@ lua require("telescope_custom")
 nnoremap <leader>f :lua require('telescope.builtin').find_files()<CR>
 nnoremap <leader>tgb :lua require('telescope_custom').git_branches()<CR>
 nnoremap <leader>ts :lua require('telescope.builtin').live_grep()<Cr>
-nnoremap <leader>tw :lua require('telescope.builtin').grep_string()<Cr>
+" nnoremap <leader>tw :lua require('telescope.builtin').grep_string()<Cr>
 nnoremap <leader>vrc :lua require('telescope_custom').search_dotfiles()<CR>
+
+" debug
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+nnoremap <Leader>dd :call vimspector#Launch()<CR>
+nnoremap <Leader>de :call vimspector#Reset()<CR>
+nnoremap <Leader>dc :call vimspector#Continue()<CR>
+nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+
+nmap <Leader>dk <Plug>VimspectorRestart
+nmap <Leader>dh <Plug>VimspectorStepOut
+nmap <Leader>dl <Plug>VimspectorStepInto
+nmap <Leader>dj <Plug>VimspectorStepOver
+
+" terminal
+tnoremap <Esc> <C-\><C-n>

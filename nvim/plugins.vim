@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
   " theme
-  Plug 'arcticicestudio/nord-vim'
+  Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
 
   " autcomplete
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -36,4 +36,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+  " debug
+  Plug 'puremourning/vimspector'
 call plug#end()

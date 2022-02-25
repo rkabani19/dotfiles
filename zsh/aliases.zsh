@@ -26,3 +26,6 @@ alias tks="tmux kill-session -t";
 alias tksv="tmux kill-server";
 alias tls="tmux ls";
 alias tn="tmux new-session -s";
+
+# random
+alias gcd='cd ~/github.com'

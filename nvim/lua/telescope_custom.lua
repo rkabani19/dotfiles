@@ -17,6 +17,7 @@ require('telescope').load_extension('fzy_native')
 local M = {}
 M.search_dotfiles = function()
     require("telescope.builtin").find_files({
+        find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
         prompt_title = "< VimRC >",
         cwd = "~/dotfiles/",
     })

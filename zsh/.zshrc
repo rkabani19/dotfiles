@@ -28,3 +28,6 @@ source $DOTFILES/aliases.zsh
 # more theme stuff
 autoload -U promptinit; promptinit
 prompt pure
+
+# pyenv
+eval "$(pyenv init -)"
