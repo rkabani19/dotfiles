@@ -29,3 +29,7 @@ alias tn="tmux new-session -s";
 
 # random
 alias gcd='cd ~/github.com'
+
+# ls
+alias ls="exa"
+alias lsa="exa -Fla"
