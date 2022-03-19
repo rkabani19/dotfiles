@@ -12,8 +12,6 @@
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
     '';
 
-    initExtra = builtins.readFile ../aliases.zsh;
-
     # TODO: Download rust and go via Nix
     sessionVariables =
       let
@@ -27,6 +25,43 @@
         PATH = pathJoin [ CARGO_BIN GOBIN "$PATH" ];
       };
 
+    shellAliases = {
+      # Git aliases
+      g = "git";
+      ga = "git add ";
+      gb = "git branch ";
+      gc = "git commit";
+      gco = "git checkout ";
+      gd = "git diff";
+      gpf = "git push - -force-with-lease";
+      gpull = "git pull";
+      gpush = "git push ";
+      grm = "git fetch origin master && git rebase origin/master";
+      gs = "git status ";
+
+      # Misspelled git
+      got = "git ";
+      get = "git ";
+      gut = "git ";
+
+      # vim to nvim
+      vi = "nvim";
+      vim = "nvim";
+
+      # tmux
+      ta = "tmux attach -t";
+      tks = "tmux kill-session -t";
+      tksv = "tmux kill-server";
+      tls = "tmux ls";
+      tn = "tmux new-session -s";
+
+      # dev
+      gcd = "cd ~/github.com";
+
+      # ls
+      ls = "exa";
+      lsa = "exa -Fla";
+    };
 
     oh-my-zsh = {
       enable = true;

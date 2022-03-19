@@ -111,7 +111,8 @@ lua << EOF
 EOF
 nnoremap <leader>f :lua require('telescope.builtin').find_files()<CR>
 nnoremap <leader>tgb :lua require('telescope.builtin').git_branches()<CR>
-nnoremap <leader>ts :lua require('telescope.builtin').live_grep()<Cr>
+nnoremap <leader>ts :lua require('telescope.builtin').live_grep()<CR>
+nnoremap <leader>vrc :lua require('telescope.builtin').find_files({ cwd="~/.config/nixpkgs/" })<CR>
 " nnoremap <leader>tw :lua require('telescope.builtin').grep_string()<Cr>
 
 " autopairs
