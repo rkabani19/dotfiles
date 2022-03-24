@@ -25,6 +25,8 @@
       cmp-path
       cmp_luasnip
       luasnip
+      # Language Specific
+      rust-tools-nvim
       # Git
       vim-fugitive
       gitsigns-nvim

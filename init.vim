@@ -159,12 +159,34 @@ lsp.rnix.setup{
     custom_on_attach(client, bufnr)
   end,
 }
-lsp.rust_analyzer.setup{
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    custom_on_attach(client, bufnr)
-  end,
-}
+
+-- rust-tools (testing)
+require('rust-tools').setup({
+    tools = {
+        autoSetHints = true,
+        hover_with_actions = true,
+        runnables = { use_telescope = true },
+        inlay_hints = {
+            show_parameter_hints = false,
+            parameter_hints_prefix = "",
+            other_hints_prefix = "",
+        },
+    },
+
+    server = {
+        capabilities = capabilities,
+        on_attach = function(client, bufnr)
+          custom_on_attach(client, bufnr)
+        end,
+        settings = {
+            ["rust-analyzer"] = {
+                checkOnSave = {
+                    command = "clippy"
+                },
+            }
+        }
+    },
+})
 EOF
 
 " cmp
@@ -195,6 +217,7 @@ lua << EOF
       { name = 'luasnip' }, -- For luasnip users.
     }, {
       { name = 'buffer' },
+      { name = 'path' },
     })
   })
 EOF
