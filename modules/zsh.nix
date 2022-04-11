@@ -33,7 +33,7 @@
       gc = "git commit";
       gco = "git checkout ";
       gd = "git diff";
-      gpf = "git push - -force-with-lease";
+      gpf = "git push --force-with-lease";
       gpull = "git pull";
       gpush = "git push ";
       grm = "git fetch origin master && git rebase origin/master";
